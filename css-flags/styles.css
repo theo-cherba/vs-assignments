@@ -1,0 +1,198 @@
+body {
+    background-color: cornflowerblue;
+}
+
+.flag {
+    border: solid 3px black;
+    margin-bottom: 10px;
+    }
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.france {
+    width: 600px;
+    height: 400px;
+    }
+
+        
+.france .stripe {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% /3);
+    }
+        
+.france .blue {
+    background-color: #002495;
+    }
+        
+.france .red {
+    background-color: #ED2938;
+    }
+
+.germany {
+    width: 500px;
+    height: 300px;
+}
+
+.germany .stripe {
+    width: 100%;
+    height: calc(100% /3);
+}
+
+.germany .red {
+    background-color: #DE0002;
+}
+
+.germany .yellow {
+    background-color: #FFCE00;
+}
+
+.madagascar {
+    background-color: #FFFFFF;
+    width: 600px;
+    height: 400px;
+}
+
+.madagascar .stripe {
+    height: calc(100% /2);
+    width: calc(200% /3);
+    margin-left: calc(100% /3);
+}
+
+.madagascar .red {
+    background-color: #FC3E32;
+}
+
+.madagascar .green {
+    background-color: #007E39;
+}
+
+.japan {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    }
+            
+.japan .circle {
+    background-color: #BC022C;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    }
+    
+.switzerland {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF0002;
+    width: 500px;
+    height: 500px;
+}
+
+.switzerland .stripeHor {
+    margin-left: -100px;
+    background-color: #FFFFFF;
+    height: calc(100% / 5);
+    width: calc(300% / 5);  
+}
+
+.switzerland .stripeVer {
+    margin-left: -200px;
+    background-color: #FFFFFF;
+    width: calc(100% / 5);
+    height: calc(300% / 5);  
+}
+
+.sweden {
+    display: flex;
+    background-color: #0269A6;
+    width: 800px;
+    height: 500px;
+}
+
+.sweden .stripeHor {
+    align-self: center;
+    justify-self: center;
+    background-color: #FECC00;
+    width: 100%;
+    height: 100px;
+}
+
+.sweden .stripeVer {
+    margin-left: -575px;
+    background-color: #FECC00;
+    height: 100%;
+    width: 100px;
+}
+
+.gambia {
+    width: 600px;
+    height: 400px;
+}
+
+.gambia .stripeRed {
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: #CE1127;
+}
+
+.gambia .stripeBlue {
+    width: 100%;
+    height: calc(100% / 3 / 6 * 4);
+    background-color: #0D1D8B;
+}
+
+.gambia .stripeGreen {
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: #3B7827;
+}
+
+.gambia .stripeWhite {
+    width: 100%;
+    height: calc(100% / 3 / 6);
+    background-color: #FFFFFF;
+}
+
+.niger {
+    width: 700px;
+    height: 600px;
+    background-color: #FFFFFF;
+}
+
+.niger .stripe {
+    Width: 100%;
+    height: calc(100% / 3);
+}
+
+.niger .orange {
+    background-color: #E15307;
+}
+
+.niger .green {
+    background-color: #10AF2A;
+}
+
+.niger .white {
+    display: flex;
+    justify-content: center;
+}
+
+.niger .circle {
+    background-color: #E15307;
+    align-self: center;
+    height: 170px;
+    width: 170px;
+    border-radius: 90%;
+}
+
+
