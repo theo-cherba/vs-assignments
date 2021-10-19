@@ -6,6 +6,16 @@ followed by all lowercase letters.
 
 capilizeAndLowercase("HelLo") // => "HELLOhello"
 */
+// var example = "ExamPle"
+// console.log(capilizeAndLowercase(example))
+
+// function capilizeAndLowercase(e) {
+//     var input = e
+//     var caps = input.toUpperCase()
+//     var noCaps = input.toLowerCase()
+//     return caps + noCaps
+// }
+
 
 //  //  //
 /* 
@@ -16,6 +26,16 @@ Hint: You'll need to use Math.floor().
 findMiddleIndex("Hello") // => 2
 findMiddleIndex("Hello World") // => 5
 */
+
+// var example = "Hello World"
+// console.log(findMiddleIndex(example))
+
+// function findMiddleIndex(e) {
+//     var input = e
+//     var half = input.length / 2
+//     var middleIndex = Math.floor(half)
+//     return middleIndex
+// }
 
 //  //  //
 /*
