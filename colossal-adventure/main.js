@@ -1,5 +1,7 @@
 /*
-
+I wanted to add the option to equip a new item from user inventory, 
+by selecting the coresponding number. 
+Also, add chance of items breaking on attacks.
 */
 //CONSTANTS: ///////////////////////////////////////////////////////////
 const readline = require('readline-sync');
@@ -9,8 +11,6 @@ const crobar = {name: "Crobar", dmgMin: 10, dmgMax: 30}
 const hands = {name:"Hands", dmgMin: 1, dmgMax: 10}
 
 const user = {name:"", day: 1, health: 100, weapon: hands, inventory:[], location:{}, restart: true, highScore: 0, combat: false}
-
-
 
 const bandage = {name: "Bandage"}
 const bacon = {name: "Fistful of Bacon"}
@@ -38,7 +38,6 @@ function print() {
             // console.leg(`item Options = ${itemOptions[i]}`)
         }       
         console.log('')
-
         // key = readlineSync.keyIn(``,{hideEchoBack: true, mask: '', limit: itemOptions});
         // for (var i = 1; i <= itemOptions.length; i++) {
         //     if (key === 'i') {  
@@ -63,7 +62,7 @@ function walk() {
 function randomEncounter() {
     if (Math.random() * 100 < 25) {
         let zombie = zombies[Math.floor(Math.random()*zombies.length)]
-        console.log(`${user.name} has encountered a Zombie ${zombie.name}`);
+        console.log(`You have encountered a Zombie ${zombie.name}`);
         console.log(`   It's coming right for you!\n`)
         user.combat = true
         do {
@@ -128,40 +127,14 @@ function attackDamage(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-
-// function actions() {
-//     key = readlineSync.keyIn(``,{hideEchoBack: true, mask: '', limit: 'wsp'});
-//         if (key === 'w') {
-//             user.day = user.day + 1
-//             //run function to pick new location.
-//             console.log(`${user.name} walks to the ${user.room.type} nearby.\n`)
-//             //run encounter chance, fight loop.
-//         } else if (key === 's') {
-//             console.log(`${user.name} searches the ${user.room.type} for loot.\n`)
-//             //run function for search/add item to inventory.
-//             user.inventory.push(crobar)
-//         } else if (key === 'p') {
-//             if (user.inventory.length > 0) {
-//                 console.log(`INVENTORY:`)
-//                 for (var i = 0; i < user.inventory.length; i++) {
-//                     console.log(`${i + 1}. ${user.inventory[i].name}`);
-//                 }
-//                 console.log('')
-//             } else {
-//                 console.log(`${user.name} has no items in their inventory.\n`)
-                
-//             }
-//         }
-// }
-
 //Intro ///////////////////////////////////////////////////////////
+console.log(`\n=================================================================`)
 console.log(`=================================================================\n`)
 console.log(`               ===================================`)
 console.log(`                            Theo's`)
 console.log(`                     Zombie Survival Game`)
 console.log(`                              --`)
 console.log(`                    "Good Luck, Have Fun!"`)
-console.log(`                      HIGH SCORE: # Days\n`)
 console.log(`               ===================================\n`)
 readlineSync.keyIn(`                    PRESS ANY KEY TO START\n                              `,{hideEchoBack: true, mask: ''})
 
@@ -207,7 +180,7 @@ do {
     console.log(`==============================================================================\n`)
     console.log(`       (VOICE): oh no ${user.name}, you've died..`)
     console.log(`                You only survived ${user.day} days..\n`)
-    key = readlineSync.keyIn(`                Play Again? Y/N `,{hideEchoBack: true, mask: '', limit: 'yn'});
+    key = readlineSync.keyIn(`                Play Again? Y/N\n`,{hideEchoBack: true, mask: '', limit: 'yn'});
         if (key === 'y') {
             console.log(`            --> Yes!\n`)
         } else if (key === 'n') {
