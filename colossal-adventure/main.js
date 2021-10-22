@@ -17,7 +17,12 @@ const bacon = {name: "Fistful of Bacon"}
 const items = [bacon, bandage, crobar]
 
 const locations = [{type: "Hotel", description: "are in a Hotel. There is not much here."}, {type: "Hardware Store", description: "are in a Hardware Store. There are Tools on the shelves."}, {type: "Hospital", description: "are in a Hospital. It's creepy here."}]
-const zombies = [{name: "Crawler", health: 10, dmgMin: 10, dmgMax: 20}, {name: "Shambler", health: 20, dmgMin: 20, dmgMax: 30}, {name: "Brute", health: 30, dmgMin: 30, dmgMax: 50}]
+
+const crawler = {name: "Crawler", health: 5, dmgMin: 1, dmgMax: 10}
+const shambler = {name: "Shambler", health: 10, dmgMin: 5, dmgMax: 30}
+const brute = {name: "Brute", health: 15, dmgMin: 10, dmgMax: 50}
+const zombies = [crawler, shambler, brute]
+
 
 //FUNCTIONS: ///////////////////////////////////////////////////////////
 function print() {
@@ -62,6 +67,7 @@ function walk() {
 function randomEncounter() {
     if (Math.random() * 100 < 25) {
         let zombie = zombies[Math.floor(Math.random()*zombies.length)]
+        zombie.health = 15
         console.log(`You have encountered a Zombie ${zombie.name}`);
         console.log(`   It's coming right for you!\n`)
         user.combat = true
@@ -90,7 +96,7 @@ function run(zombie) {
     } else {
         console.log(`    You couldn't escape..`)
         let damage = attackDamage(zombie.dmgMin, zombie.dmgMax)
-        console.log(`    Zombie does ${damage}% Damage to the You!\n`)
+        console.log(`    Zombie does ${damage} Damage to the You!\n`)
         user.health = user.health - damage
     }
 }
@@ -98,12 +104,12 @@ function run(zombie) {
 function attack(zombie) {
     console.log(`You try to attack with your ${user.weapon.name}!`)
     let damage = attackDamage(user.weapon.dmgMin, user.weapon.dmgMax)
-    console.log(`   You do ${damage}% Damage to the Zombie!\n`)
+    console.log(`   You do ${damage} Damage to the Zombie!\n`)
     zombie.health = zombie.health - damage
     if (zombie.health > 0) {
         console.log(`The Zombie ${zombie.name} attacks you!`)
         let damage = attackDamage(zombie.dmgMin, zombie.dmgMax)
-        console.log(`   Zombie does ${damage}% Damage to the You!\n`)
+        console.log(`   Zombie does ${damage} Damage to the You!\n`)
         user.health = user.health - damage
     } else {     
         console.log(`You've defeated the Zombie!`)   
@@ -141,6 +147,9 @@ readlineSync.keyIn(`                    PRESS ANY KEY TO START\n                
 //Main loop ///////////////////////////////////////////////////////////
 do {
     user.health = 100
+    user.day = 1
+    user.weapon = hands
+    user.inventory =[]
     console.log(`=================================================================`)
     console.log(`=================================================================\n`)
     if (user.highScore > 1) {
@@ -175,8 +184,7 @@ do {
     } while (user.health > 0) 
 
     //Death, play again? 
-    user.weapon = hands
-    user.inventory =[]
+
     console.log(`==============================================================================\n`)
     console.log(`       (VOICE): oh no ${user.name}, you've died..`)
     console.log(`                You only survived ${user.day} days..\n`)
