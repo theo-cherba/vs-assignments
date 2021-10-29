@@ -1,0 +1,16 @@
+body {
+    background-color: cornflowerblue;
+}
+
+input {
+    background-color: lightgray;
+}
+
+select {
+    background-color: lightgrey;
+}
+
+button {
+    background-color: blue;
+    color: white;
+}

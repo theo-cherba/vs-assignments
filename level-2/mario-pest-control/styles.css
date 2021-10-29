@@ -1,0 +1,25 @@
+body {
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+img {
+    margin-top: 20px;
+    width: 30%;
+}
+
+li {
+    width: 90%;
+    border: 3px solid black;
+    margin: 3px;
+}
+
+input {
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    ul {
+        display:inline-flex
+    }
+}
