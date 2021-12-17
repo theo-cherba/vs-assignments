@@ -1,0 +1,14 @@
+body {
+    background-color: cornflowerblue;
+    text-align: center;
+
+}
+
+h3 {
+    display: inline-block;
+    width: 90%;
+    margin: 1%;
+    padding: 1%;
+    background-color: black;
+    color: white;
+}

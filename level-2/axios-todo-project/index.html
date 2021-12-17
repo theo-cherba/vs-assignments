@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Axios ToDo Project</title>
+</head>
+<body>
+    <h1 class="title">ToDo List</h1>
+    <form name="todo-form">
+        <input name="title" placeholder="Title (required)" required><br>
+        <input name="imgUrl" type="src" placeholder="Image URL" /><br>
+        <input name="price" type="number" placeholder="Price"><br>
+        <input name="description" placeholder="Description"><br>
+        
+        <button>Add ToDo Item</button>
+    </form><hr>
+    <ol id="todo-list">
+        <li>
+            <span>Title:</span>
+            <p>ToDo Example One</p>
+            <img src="https://pzwiki.net/w/images/0/09/Spiffo_EatingHamburger.png">
+            <span>Price:</span>
+            <p>42</p><br>
+            <span>Description:</span>
+            <p>Eat a Burger. </p><br>
+            <div class="buttons">
+                <label class="completed">Complete
+                    <input type="checkbox">
+                </label>
+                <button>Edit</button>
+                <button>X</button>
+            </div>
+        </li>
+        <li>
+            <span>Title:</span>
+            <p>ToDo Example Two</p>
+            <div class="buttons">
+                <label class="completed">Complete
+                    <input type="checkbox">
+                </label>
+                <button>Edit</button>
+                <button>X</button>
+            </div>
+        </li>
+    </ol>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+.
